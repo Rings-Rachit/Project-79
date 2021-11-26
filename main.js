@@ -1,0 +1,56 @@
+menu_list_array = ["Veg Margherita Pizza",
+                        "Chicken Tandoori Pizza",
+                        "Veg Supreme Pizza",
+                        "Paneer Tikka Pizza",
+                        "Deluxe Veggie Pizza",
+                        "Veg Extravaganza Pizza"];
+    
+    function getmenu(){
+        var htmldata="";
+        menu_list_array.sort();
+        for(var i=0;i<menu_list_array.length;i++){
+            htmldata=htmldata+ menu_list_array[i] + '<br>'
+        }
+        document.getElementById("display_menu").innerHTML = htmldata;
+        //give the appropriate id name as display_menu 
+    }
+    function add_top(){
+        var item=document.getElementById("add_item").value;
+        menu_list_array.push(item);
+        add_item();
+    }
+  
+
+    function add_items(){
+        
+        // use the sort function as - menu_list_array.sort();
+        menu_list_array.sort();
+        htmldata="";
+
+        var htmldata;
+		var imgtags='<img id="im1" src="pizzaImg.png">'
+        var item =document.getElementById("add_item").value;
+        console.log(item);
+
+       
+       
+        for(var i=0;i<menu_list_array.length;i++){
+            htmldata=htmldata+imgtags+ menu_list_array[i]+'<br>';
+        }
+         document.getElementById("display_addedmenu").innerHTML = htmldata;
+
+         const string = " id had hdd ihas kd m df";
+          //split the above string into an array of strings 
+         //whenever a blank space is encountered
+          const array = string.split(" "); 
+          //loop through each element of the array and capitalize the first letter.
+         for (var i = 0; i < array.length; i++) {
+              array[i] = array[i].charAt(0).toUpperCase() + array[i].slice(1); }
+          //Join all the elements of the array back into a string
+           //using a blankspace as a separator
+            const string2 = array.join(" "); console.log(string2);
+
+		
+    }
+  
+
